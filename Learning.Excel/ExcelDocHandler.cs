@@ -41,5 +41,10 @@ namespace Learning.Excel
         {
             throw new NotImplementedException();
         }
+
+       public Person GetByID(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
