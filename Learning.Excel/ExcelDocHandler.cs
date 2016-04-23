@@ -1,4 +1,5 @@
 ﻿using Excel;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
@@ -34,6 +35,11 @@ namespace Learning.Excel
                 persons.Add(person);
             }
             return persons;
+        }
+
+        public Person GetByName(string name)
+        {
+            throw new NotImplementedException();
         }
     }
 }
