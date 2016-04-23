@@ -54,7 +54,7 @@ namespace Learning.Excel
         {
             try
             {
-                return this.GetAll().Where(x => x.ID == id).FirstOrDefault();
+                return this.GetAll().Where(x => x.ID == (double)id).FirstOrDefault();
             }
             catch (Exception)
             {
