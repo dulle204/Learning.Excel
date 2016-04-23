@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
+using System.Linq;
 
 namespace Learning.Excel
 {
@@ -37,9 +38,16 @@ namespace Learning.Excel
             return persons;
         }
 
-        public Person GetByName(string name)
+        public List<Person> GetByName(string name)
         {
-            throw new NotImplementedException();
+            List<Person> result = new List<Person>();
+            if (name != null && name != String.Empty) 
+            {
+                var list = this.GetAll();
+                result = list.Where(x => x.FirstName == name).ToList();
+            }
+
+            return result;
         }
 
        public Person GetByID(int id)

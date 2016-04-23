@@ -6,7 +6,7 @@ namespace Learning.Excel
     {
         static void Main(string[] args)
         {
-            var ListOfPersons = new ExcelDocHandler().GetAll();
+            var ListOfPersons = new ExcelDocHandler().GetByName("Diana");
 
             foreach (var item in ListOfPersons)
             {
