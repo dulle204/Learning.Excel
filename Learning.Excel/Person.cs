@@ -2,7 +2,7 @@
 {
     public class Person
     {
-        public int ID { get; set; }
+        public double ID { get; set; }
 
         public string FirstName { get; set; }
 
@@ -10,14 +10,22 @@
 
         public string Email { get; set; }
 
-        public Gender Genfeder { get; set; }
+        public string Gender { get; set; }
+    }
+
+    public enum Gender
+    {
+        Male,
+        Female
+    }
+
+    public static class Constants
+    {
+        public static string MALE { get; } = "Male";
+        public static string FEMALE { get; } = "Female";
     }
 }
 
 
 
-    public enum Gender
-    {
-        Male, 
-        Female
-    }
+    

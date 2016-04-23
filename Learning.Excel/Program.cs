@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Learning.Excel
 {
@@ -10,6 +6,15 @@ namespace Learning.Excel
     {
         static void Main(string[] args)
         {
+            var ListOfPersons = new ExcelDocHandler().GetAll();
+
+            foreach (var item in ListOfPersons)
+            {
+                string s = $"{item.ID} | {item.FirstName} | {item.LastName} | {item.LastName} | {item.Gender.ToString()}";
+                Console.WriteLine(s);
+            }
+
+            Console.ReadKey();
         }
     }
 }
