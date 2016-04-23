@@ -52,7 +52,15 @@ namespace Learning.Excel
 
        public Person GetByID(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return this.GetAll().Where(x => x.ID == id).FirstOrDefault();
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
     }
 }
