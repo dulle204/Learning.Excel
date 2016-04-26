@@ -7,15 +7,15 @@ namespace Learning.Excel
     {
         static void Main(string[] args)
         {
-            var ListOfPersons = new ExcelDocHandler().GetByID(5);
-            string s = $"{ListOfPersons.ID} | {ListOfPersons.FirstName} | {ListOfPersons.LastName} | {ListOfPersons.LastName} | {ListOfPersons.Gender.ToString()}";
-            Console.WriteLine(s);
+            var ListOfPersons = new ExcelDocHandler().GetByName(Console.ReadLine());
+            //string s = $"{ListOfPersons.ID} | {ListOfPersons.FirstName} | {ListOfPersons.LastName} | {ListOfPersons.Email} | {ListOfPersons.Gender.ToString()}";
+            //Console.WriteLine(s);
 
-            //foreach (var item in ListOfPersons)
-            //{
-            //    string s = $"{item.ID} | {item.FirstName} | {item.LastName} | {item.LastName} | {item.Gender.ToString()}";
-            //    Console.WriteLine(s);
-            //}
+            foreach (var item in ListOfPersons)
+            {
+                string s = $"{item.ID} | {item.FirstName} | {item.LastName} | {item.Email} | {item.Gender.ToString()}";
+                Console.WriteLine(s);
+            }
 
             Console.ReadKey();
         }
